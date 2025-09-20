@@ -1,0 +1,35 @@
+img{
+    height: 120px;
+    width: 150px;
+    border-radius: 50px;
+    margin-left: 610px;
+    margin-top: 30px;
+}
+
+h1{
+    margin-left: 610px;
+}
+h5{
+    margin-left: 625px;
+}
+.moto{
+    margin-left: 590px;
+}
+.matki{
+    margin-left: 625px;
+}
+.rt{
+    margin-left: 570px;
+}
+.pl{
+    margin-left: 30px;
+}
+.li{
+    margin-left: 30px;
+}
+
+@media (max-width: 600px) {
+    body {
+      background-color: lightgreen;
+    }
+  }

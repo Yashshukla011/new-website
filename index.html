@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="st.css">
+</head>
+<body>
+
+  <div class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+      <form id="loginForm" action="pages/index.html" method="POST">
+        <div class="input-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" id="loginBtn" class="btn" disabled><a href="koi mil gya/index.html">Log in</a></button>
+        <p class="signup-text">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+
+    function checkInputs() {
+      if(email.value.trim() !== "" && password.value.trim() !== "") {
+        loginBtn.disabled = false;
+      } else {
+        loginBtn.disabled = true;
+      }
+    }
+
+    email.addEventListener('input', checkInputs);
+    password.addEventListener('input', checkInputs);
+  </script>
+
+</body>
+</html>
