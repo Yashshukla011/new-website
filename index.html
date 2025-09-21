@@ -1,11 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
-  <link rel="stylesheet" href="st.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -21,8 +20,14 @@
           <label for="password">Password</label>
           <input type="password" id="password" placeholder="Enter your password" required>
         </div>
-        <button type="submit" id="loginBtn" class="btn" disabled><a href="koi mil gya/index.html">Log in</a></button>
-        <p class="signup-text">Don’t have an account? <a href="signup.html">Sign Up</a></p>
+        <!-- anchor <a> hata diya -->
+        <button type="button" id="loginBtn" class="btn" disabled 
+  onclick="window.location.href='s.html'">
+  Log in
+</button>
+
+        
+        <p class="signup-text">Don’t have an account? <a href="#">Sign Up</a></p>
       </form>
     </div>
   </div>
@@ -33,7 +38,7 @@
     const loginBtn = document.getElementById('loginBtn');
 
     function checkInputs() {
-      if(email.value.trim() !== "" && password.value.trim() !== "") {
+      if (email.value.trim() !== "" && password.value.trim() !== "") {
         loginBtn.disabled = false;
       } else {
         loginBtn.disabled = true;
